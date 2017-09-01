@@ -3,6 +3,12 @@ if [ $# -eq 0 ]
 then
     docker run -it --rm python:2.7-slim
 else
-    docker run -it --rm -v "$PWD":/user/src/ python:2.7-slim python /user/src/$1
+    echo 'has args'
+    P=$1
+    DIR=${P%/*}
+    EXE=${P##*/}    
+    echo $DIR
+    echo $EXE
+    docker run -it --rm -v $DIR:/user/src/ aganzha/python:latest python /user/src/$EXE
 fi
 
