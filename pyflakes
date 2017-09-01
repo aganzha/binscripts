@@ -1,0 +1,4 @@
+#!/bin/bash
+#out="/code:9: undefined name 'smode'"
+out=`docker run --rm  -v $1:/code eeacms/pyflakes`
+echo ${out/\/code/$1}
