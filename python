@@ -6,9 +6,8 @@ else
     echo 'has args'
     P=$1
     DIR=${P%/*}
-    EXE=${P##*/}    
+    EXE=${P##*/}
     echo $DIR
     echo $EXE
-    docker run -it --rm -v $DIR:/user/src/ aganzha/python:latest python /user/src/$EXE
+    docker run -it --rm -v ~/:/home/aganzha -v $DIR:/user/src/ aganzha/python:latest python /user/src/$EXE
 fi
-
