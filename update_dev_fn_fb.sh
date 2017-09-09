@@ -1,4 +1,13 @@
 #!/bin/sh
+PG=`docker ps | grep postgres`
+echo "thats PG: $PG"
+if [ -z "$PG" ]
+then
+    echo 'postgres is not running'
+    docker start postgres
+else
+    echo 'found postgres'
+fi
 cd /mnt/100ext4/
 sftp aganzha@10.88.114.93:/home/aganzha/arch/current.sql.tar.gz
 gzip -d current.sql.tar.gz 
