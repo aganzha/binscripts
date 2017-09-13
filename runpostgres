@@ -1,5 +1,2 @@
 #!/bin/sh
-# to connect use: docker exec -it 4941 psql -U postgres
-# docker run --rm -it --name postgres -v /mnt/100ext4/postgres_data:/var/lib/postgresql/data -p 5432 postgres
-# docker run -it -d --name postgres -v /mnt/100ext4/postgres_data:/var/lib/postgresql/data -p 5432:5432 postgres
-docker run -d -it --name postgres -v /mnt/100ext4/postgres_data:/var/lib/postgresql/data --network fndocker_default --network default postgresql/data
+docker run -d -it --name postgres -v /mnt/100ext4/postgres_data:/var/lib/postgresql/data --network postgres postgres
