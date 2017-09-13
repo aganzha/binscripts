@@ -1,0 +1,3 @@
+#!/bin/sh
+
+docker run -it -d --name nginx -p 80:80 -p 443:443 --link fndocker_web_1 --network fn -v /home/aganzha/nginx/:/etc/nginx/conf.d -v /home/aganzha/foundersnetworksite/ssl/august_17/:/etc/ssl/ -v /home/aganzha/foundersnetworksite/fnsite/static/:/media/static/ -v /home/aganzha/foundersnetworksite/fnstaff/static/fnstaff/js/node_modules/:/media/node_modules/ nginx nginx -g 'daemon off;'
