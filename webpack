@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run -it --rm -v ${PWD}:/root/src/ -w /root/src/ aganzha/node /root/node_modules/webpack/bin/webpack.js

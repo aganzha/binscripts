@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run -it --rm -v ${PWD}:/mnt/ -w /mnt/ node npm "$1" "$2" "$3" "$4" "$5"

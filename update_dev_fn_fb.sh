@@ -15,4 +15,4 @@ sudo mv current.sql.tar postgres_data/current.sql.tar
 echo 'drop database if exists app;create database app;grant all privileges on database app to app;' | docker exec -i postgres psql -U postgres
 docker exec -i postgres pg_restore -v -d app -U postgres /var/lib/postgresql/data/current.sql.tar
 sudo rm postgres_data/current.sql.tar
-
+sudo rm postgres_data/current.sql.tar
