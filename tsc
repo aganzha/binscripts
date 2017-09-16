@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run -i --rm -v ${PWD}:/root/src/ -w /root/src/ aganzha/node /root/node_modules/typescript/bin/tsc

@@ -2,8 +2,8 @@
 P=$1
 DIR=${P%/*}
 EXE=${P##*/}
-docker run -i --rm -v $DIR:/mnt/ aganzha/python pyflakes /mnt/$EXE > mout
+docker run -i --rm -v "$DIR":/mnt/ aganzha/python pyflakes /mnt/"$EXE" > mout
 REPL="s=/mnt=$DIR=g"
-sed -i -e $REPL mout
+sed -i -e "$REPL" mout
 cat mout
 rm mout

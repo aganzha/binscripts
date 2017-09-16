@@ -1,2 +1,2 @@
 #!/bin/sh
-docker run -d -it --name postgres -v /mnt/100ext4/postgres_data:/var/lib/postgresql/data --network postgres postgres
+docker run -d -it --name postgres -v /mnt/100ext4/postgres_data:/var/lib/postgresql/data -p 5432:5432 --network postgres postgres
