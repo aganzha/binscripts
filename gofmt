@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run -i --rm -v "$PWD":/mnt/ -v /tmp/:/tmp/ -w /mnt/ aganzha/golang gofmt "$@"
