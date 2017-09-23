@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DIRNAME=${PWD##*/}
-cd ".."
-docker run -it --rm -v ${PWD}:/root/src/ -w /root/src/ aganzha/node:hp /root/node_modules/webpack/bin/webpack.js --config "$DIRNAME/webpack.config.js"
+# DIRNAME=${PWD##*/}
+# cd ".."
+# docker run -it --rm -v ${PWD}:/root/src/ -w /root/src/ aganzha/node:hp /root/node_modules/webpack/bin/webpack.js --config "$DIRNAME/webpack.config.js"
 
-#docker run -it --rm -v ${PWD}:/root/src/ -w /root/src/ aganzha/node:fn /root/node_modules/webpack/bin/webpack.js "$@"
+docker run -it --rm -v ${PWD}:/root/src/ -w /root/src/ aganzha/node:fn /root/node_modules/webpack/bin/webpack.js "$@"
