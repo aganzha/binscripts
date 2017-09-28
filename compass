@@ -1,6 +1,11 @@
 #!/bin/bash
+
+echo 'Export proper path!'
+
+# hp
 # DIRNAME=${PWD##*/}
 # cd ".."
 # docker run -it --rm -v /home/aganzha/hp/static/:/srv/static/ -w /srv/static/"$DIRNAME"/ aganzha/hp:latest node-sass style.scss style.css
 
-docker run --rm  -v $(pwd):/app myparkfolio/sass-compass compass compile
+# fn
+# docker run --rm  -v $(pwd):/app myparkfolio/sass-compass compass compile

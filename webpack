@@ -1,7 +1,11 @@
 #!/bin/bash
 
-DIRNAME=${PWD##*/}
-cd ".."
-docker run -it --rm -v /home/aganzha/hp/static/:/srv/static/ -w /srv/static/"$DIRNAME"/ aganzha/hp:latest webpack
+echo 'Export proper path!'
 
+# hp
+# DIRNAME=${PWD##*/}
+# cd ".."
+# docker run -it --rm -v /home/aganzha/hp/static/:/srv/static/ -w /srv/static/"$DIRNAME"/ aganzha/hp:latest webpack
+
+# fn
 #docker run -it --rm -v ${PWD}:/root/src/ -w /root/src/ aganzha/node:fn /root/node_modules/webpack/bin/webpack.js "$@"
