@@ -1,6 +1,6 @@
 #!/bin/sh
 
-docker run -it -d --name nginx -p 80:80 -p 443:443 --link fndocker_web_1 --network hp -v /home/aganzha/nginx/:/etc/nginx/conf.d -v /home/aganzha/foundersnetworksite/ssl/august_17/:/etc/ssl/ -v /home/aganzha/foundersnetworksite/fnsite/static/:/media/static/ -v /home/aganzha/foundersnetworksite/fnstaff/node_modules/:/media/node_modules/ -v /home/aganzha/foundersnetworksite/fnstaff/static/fnstaff/:/media/fnstaff/ -v /home/aganzha/foundersnetworksite/staticfiles/admin/:/media/admin/ \
-       -v /home/aganzha/hp/:/media/hp/ \
+docker run -it -d --name nginx -p 80:80 -p 443:443 --link fndocker_web_1 --network fn -v /home/aganzha/nginx/:/etc/nginx/conf.d -v /home/aganzha/foundersnetworksite/ssl/august_17/:/etc/ssl/ -v /home/aganzha/foundersnetworksite/fnsite/static/:/media/static/ -v /home/aganzha/foundersnetworksite/fnstaff/node_modules/:/media/node_modules/ -v /home/aganzha/foundersnetworksite/fnstaff/static/fnstaff/:/media/fnstaff/ -v /home/aganzha/foundersnetworksite/staticfiles/admin/:/media/admin/ \
+       -v /home/aganzha/hp/static/:/media/hp/static/ \
        --mount source=hp_node_modules,target=/media/hp_node_modules \
        nginx nginx -g 'daemon off;'
