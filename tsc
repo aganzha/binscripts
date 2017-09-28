@@ -3,4 +3,5 @@ DIRNAME=${PWD##*/}
 cd ".."
 docker run -i --rm -v /home/aganzha/hp/static/:/srv/static/ -w /srv/static/"$DIRNAME"/ aganzha/hp:latest tsc
 
-# docker run -i --rm -v ${PWD}:/root/src/ -w /root/src/ aganzha/node /root/node_modules/typescript/bin/tsc
+#docker run -i --rm -v ${PWD}:/root/src/ -w /root/src/ aganzha/node /root/node_modules/typescript/bin/tsc
+
